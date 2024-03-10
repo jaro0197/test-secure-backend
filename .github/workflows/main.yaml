@@ -21,7 +21,7 @@ jobs:
       - name: Run image
         run: docker run -d -p 4001:4001 backend:latest
       - name: Add permission
-        run: chmod+x ./check-port.sh
+        run: chmod +x check-port.sh
       - name: Verify port
         run: ./check-port.sh
 
