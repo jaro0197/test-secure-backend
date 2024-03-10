@@ -1,14 +1,6 @@
 ﻿#!/bin/bash
-# Step 1: Install npm dependencies
-echo "Installing npm dependencies..."
-npm install
-
-# Step 2: Start the npm project
-echo "Starting the npm project..."
-npm start & # The ampersand runs the command in the background
-
-# Step 3: Wait for port 8081 to be active with a 2-minute timeout
-echo "Waiting for port 8081 to be active..."
+# Step 1: Wait for port 4001 to be active with a 2-minute timeout
+echo "Waiting for port 4001 to be active..."
 
 # Function to check if port is open
 wait_for_port() {
@@ -36,7 +28,7 @@ wait_for_port() {
 }
 
 # Use the wait_for_port function with a 120-second timeout
-if ! wait_for_port 8081 120; then
+if ! wait_for_port 4001 120; then
   exit 1
 fi
 
